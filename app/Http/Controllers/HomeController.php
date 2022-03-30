@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
+        // $feed = \Feeds::make('https://www.sendinblue.com/feed/', 10);
         $feed = \Feeds::make('https://blog.enguehard.info/feed/', 10);
         $data = array(
             'title'     => $feed->get_title(),
